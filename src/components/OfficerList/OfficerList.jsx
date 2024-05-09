@@ -1,10 +1,11 @@
-import OfficerProfile from "./OfficerProfile";
+import OfficerProfile from "../OfficerProfile/OfficerProfile";
+import css from "./OfficerList.module.css";
 
 export default function OfficerList({ officers }) {
     return (
-        <ul>
+        <ul className={css.list}>
             {officers.map((officer) => (
-            <li key={officer.id}>
+            <li key={officer.id} className={css.item}>
                 <OfficerProfile officer={officer} />
             </li>
             ))}
